@@ -155,25 +155,25 @@
 
 //? Methods and Props Overriding in ES6
 
-// class Person {
-//     name;
-//     constructor(name){
-//         this.name=name;
-//         this.occupation = "unemployed"
-//     }
-//     greet(){console.log("hello I am a "+this.occupation)}
-//     introduce(){console.log("hello I am "+this.name)}
+class Person {
+    name;
+    constructor(name){
+        this.name=name;
+        this.occupation = "unemployed"
+    }
+    greet(){console.log("hello I am a "+this.occupation)}
+    introduce(){console.log("hello I am "+this.name)}
 
-// }
-// class Teacher extends Person{
-//     payment;occupation;
-//     constructor(name , payment){
-//         super(name)
-//         this.payment = payment;
-//         this.occupation = "Teacher"
-//     }
-//     greet(){console.log(this.occupation+" inheritance and ovverrriding")}
-//     static test(){console.log("I am a Static method", this);}
-// }
-// let t1 = new Teacher("Ahmed",5000);
-// console.log(t1);
+}
+class Teacher extends Person{
+    payment;occupation;
+    constructor(name , payment){
+        super(name)
+        this.payment = payment;
+        this.occupation = "Teacher"
+    }
+    greet(){console.log(this.occupation+" inheritance and ovverrriding")}
+    static test(){console.log("I am a Static method", this);}
+}
+let t1 = new Teacher("Ahmed",5000);
+console.log(t1);
